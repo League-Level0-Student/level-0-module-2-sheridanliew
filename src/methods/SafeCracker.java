@@ -14,6 +14,9 @@ import javax.swing.JOptionPane;
 public class SafeCracker {
 
 	public static void main(String[] args) {
+		for (int guess = 0; guess < 10000000; guess++) {
+			tryCode(guess);
+		}
 		/*
 		 * Your mission: use the tryCode method to crack the safe by trying all possible
 		 * combinations
@@ -23,7 +26,7 @@ public class SafeCracker {
 	}
 
 	static void tryCode(int guess) {
-		System.out.println("trying " + guess);
+		System.out.println("Trying " + guess);
 
 		int secretCode = 9999999 - wekncrzpasfdkjhcfjse;
 
@@ -45,5 +48,5 @@ public class SafeCracker {
 		}
 	}
 
-	final static int wekncrzpasfdkjhcfjse = new Random().nextInt(100);
+	final static int wekncrzpasfdkjhcfjse = new Random().nextInt(10000000);
 }
